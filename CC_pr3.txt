@@ -1,0 +1,16 @@
+public class Hello {
+	public Decimal weight { get; set; }
+	public Decimal height { get; set; }
+	public Decimal bmi { get; private set; }
+public void calculateBMI() {
+Decimal heightInMeters = height / 100;
+bmi = weight / (heightInMeters * heightInMeters);
+bmi = bmi.setScale(2);
+System.debug(bmi);
+}
+}
+
+//Hello obj = new Hello();
+//obj.weight = 70;
+//obj.height = 170;
+//obj.calculateBMI();
